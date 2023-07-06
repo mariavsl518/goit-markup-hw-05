@@ -441,7 +441,7 @@
           </ul>
         </div>
 
-        <form class="subscribe">
+        <div class="subscribe">
           <label class="subscribe-title"
             >Subscribe
             <input
@@ -458,7 +458,7 @@
               <use href="./images/icons.svg#send"></use>
             </svg>
           </button>
-        </form>
+        </div>
       </div>
     </footer>
     <!-- MODAL -->
@@ -471,13 +471,18 @@
           </svg>
         </button>
 
-        <form class="input-box">
+        <div class="input-box">
           <p class="modal-title">
             Leave your contacts and we will call you back
           </p>
-          <label class="modal-label">
+          <label class="modal-label" for="user-name">
             Name
-            <input class="modal-input" type="text" name="name" />
+            <input
+              class="modal-input"
+              type="text"
+              name="user-name"
+              id="user-name"
+            />
             <svg
               class="input-icon"
               width="18"
@@ -521,7 +526,7 @@
             <a href="">Privacy policy </a>
           </label>
           <button class="blue-button" type="submit">Send</button>
-        </form>
+        </div>
       </div>
     </div>
 
