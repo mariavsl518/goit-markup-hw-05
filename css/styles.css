@@ -653,9 +653,6 @@ button {
 
 /* INPUT */
 
-.input-box{
-    
-}
 .modal-title{
     text-align: center;
     font-size: 16px;
@@ -667,22 +664,24 @@ button {
     color: #2E2F42;
 }
 .modal-form{
-    
-}
-.modal-label{
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-     
-    font-family: inherit;
-    color: #8E8F99;
-    font-size: 12px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px;
-    letter-spacing: 0.48px;
 
+}
+.label-box{
+    margin-bottom: 8px; 
+}
+
+.modal-label{
+    color: #8E8F99;
+    font-weight: 400;
+    letter-spacing: 0.04em; 
+    line-height: 1.17; 
+    font-size: 12px; 
+     margin-bottom: 4px; 
+
+    position: relative;
+}
+.input-box {
+    display: block;
     position: relative;
 }
 .input-icon {
@@ -732,6 +731,7 @@ button {
     line-height: 14px;
     letter-spacing: 0.48px;
     color:#8E8F99;
+    margin-top: 16px;
 }
 .check-box {
 
@@ -739,4 +739,7 @@ button {
 }
 .check-box:checked {
     color: var(--ocean-color);
+}
+.send-btn {
+    margin-top: 24px;
 }
