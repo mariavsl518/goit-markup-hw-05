@@ -670,7 +670,9 @@ button {
     margin-bottom: 8px; 
 }
 
-.modal-label{
+.modal-label,
+.user-privacy {
+    display: block;
     color: #8E8F99;
     font-weight: 400;
     letter-spacing: 0.04em; 
@@ -681,17 +683,9 @@ button {
     position: relative;
 }
 .input-box {
-    display: block;
     position: relative;
 }
-.input-icon {
-    fill: #2E2F42;
-    position: absolute;
-    left: 16px; 
-    bottom: 8px;
-    transition:fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-}
 .modal-input{
     padding: 11px 38px;
     margin-top: 2px;
@@ -702,6 +696,16 @@ button {
     border: 1px solid rgba(46, 47, 66, 0.40);
     transition:border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+.input-icon {
+    fill: #2E2F42;
+
+    position: absolute;
+    left: 16px; 
+    top: 50%;
+    transform: translateY(-50%);
+
+    transition:fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus{
     border-color: var(--iris-color);
@@ -724,6 +728,9 @@ button {
 .comment-box{
     
 }
+.checkbox-area{
+
+}
 .modal-check {
     font-size: 12px;
     font-style: normal;
@@ -739,6 +746,12 @@ button {
 }
 .check-box:checked {
     color: var(--ocean-color);
+}
+.modal-check{
+
+}
+.check-icon{
+    
 }
 .send-btn {
     margin-top: 24px;
