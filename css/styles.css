@@ -540,6 +540,9 @@ button {
     flex-direction: column;
     font-weight: 500;
 }
+.subscribe-title::placeholder{
+    color:#fff;
+}
 .subscribe-input{
     max-width: 264px;
     max-height: 40px;
@@ -549,6 +552,10 @@ button {
     background-color: #2E2F42;
     margin-top: 16px;
     padding: 8px 16px;
+}
+.subscribe-input:focus{
+    border-color: var(--iris-color);
+    outline: var(--iris-color);
 }
 .subscribe-btn{
     color: #fff;
@@ -646,8 +653,8 @@ button {
     gap:8px;
     justify-content: center;
     position: relative;
-    position: absolute;
     top: 72px;
+    align-items: center;
     
 }
 .modal-title{
@@ -666,25 +673,51 @@ button {
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.48px;
+
+    position: relative;
+}
+.input-icon {
+    fill: #2E2F42;
+    position: absolute;
+    left: 16px; 
+    bottom: 0;
+    transform: translateY();
 }
 .modal-input{
-    padding: 38px;
+    padding: 11px 38px;
     margin-top: 2px;
-    max-width: 360px;
-    max-height: 40px;
+    min-width: 360px;
+    min-height: 40px;
 
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
 }
-modal-input::placeholder{
+.modal-input:focus{
+    border-color: var(--iris-color);
+    outline: var(--iris-color);
+}
+.modal-input:focus .input-icon{
+    fill:var(--iris-color);
+}
+.comment-box {
+    padding-left: 16px;
+    min-height: 120px;
+}
+
+.comment-box::placeholder{
     color: rgba(46, 47, 66, 0.40);
 }
-.modal-input:focus-within{
-    border-color: var(--iris-color);
 
-}
 .comment-box{
-    resize: vertical;
+    
+}
+.modal-check {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+    color:#8E8F99;
 }
 .send-btn {
     font-family: "Roboto", sans-serif; 
@@ -694,7 +727,7 @@ modal-input::placeholder{
     letter-spacing: 0.04em;
 
     display: block;
-    min-width: 169px;
+    width: 169px;
     height: 56px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
