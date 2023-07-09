@@ -778,7 +778,8 @@ button {
 }
 .checkbox-input:checked + .policy-label .modal-custom-checkbox{
     background-color: var(--ocean-color);
-    border-color: var(--ocean-color);
+    border: none;
+    fill: var(--cloud-color);
 }
 /* .checkbox-input:active +.policy-label>.modal-custom-checkbox>.check-icon  {
     opacity: 1;
