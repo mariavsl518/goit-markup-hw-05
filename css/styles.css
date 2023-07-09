@@ -669,9 +669,12 @@ button {
 .label-box{
     margin-bottom: 8px; 
 }
+.label-box:nth-child(4){
+    margin-bottom: 16px;
 
-.modal-label,
-.policy-label {
+}
+
+.modal-label {
     display: block;
     color: #8E8F99;
     font-weight: 400;
@@ -692,13 +695,15 @@ button {
     margin-top: 2px;
     width: 100%;
     height: 40px;
-    outline: transparent;
+    background-color: transparent; 
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
 
     font-size: 12px; 
     line-height: 1.17;
     letter-spacing: 0.04em; 
+
+    transition: border-color var(--animation);
 }
 .input-icon {
     fill: var(--main-grey-color);
@@ -726,20 +731,28 @@ button {
 
     resize: none; 
     color: rgba(46, 47, 66, 0.4); 
-
 }
 
 .comment-box::placeholder{
     color: rgba(46, 47, 66, 0.40);
 }
+/* checkbox */
+
 .modal-checkbox-area{
     margin-bottom: 24px;
 }
-
 .checkbox-input{
 
 }
-
+.policy-label {
+    display: block;
+    color: #8E8F99;
+    font-weight: 400;
+    letter-spacing: 0.04em; 
+    line-height: 1.17em; 
+    font-size: 12px; 
+    margin-bottom: 4px; 
+}
 .modal-custom-checkbox{
     display: inline-flex;
     align-items: center;
@@ -754,16 +767,19 @@ button {
     transition: background-color var(--animation), fill var(--animation);
 }
 .check-icon{
-
+    
 }
 
 .policy-link{
     color: #4d5ae5;
 }
-.checkbox-input:active + .policy-label .modal-custom-checkbox {
+.checkbox-input:active + .policy-label.modal-custom-checkbox {
     background-color: var(--ocean-color);
-    fill: var(--cloud-color);
+    border-color: var(--ocean-color);
 }
+/* .checkbox-input:active +.policy-label>.modal-custom-checkbox>.check-icon  {
+    opacity: 1;
+} */
 .send-btn {
     line-height: 1.5;
     transition: background-color var(--animation);
