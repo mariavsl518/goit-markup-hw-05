@@ -67,7 +67,16 @@ button {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
  } 
 /* logo */
-.link.logo {
+.header-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-line{
+    display: flex;
+    align-items: center;
+}
+.logo {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -81,35 +90,30 @@ button {
 .logo-grey {
     color: var(--main-grey-color);
 }
-.header-container{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav-line {
+/* navigation */
+.nav-list {
     display: flex;
     align-items: center;
+    gap: 40px;
+
+}
+.nav-item{
+    font-weight: 500;
+}
+.nav-link {
+    position:relative;
+    transition: color var(--animation);
 }
 .nav-list {
     display: flex;
     gap: 40px;
 }
-.nav-item{
-    font-weight: 500;
-
-}
-
 .nav-link {
-    position:relative;
-    transition: color var(--animation);
-}
-.link.nav-link {
     display: flex;
     color: var(--title-color);
     font-style: normal;
     padding: 24px 0;
 }
-
 .nav-link.active::after{
     content: "";
     width: 100%;
@@ -120,28 +124,27 @@ button {
     left: 0; 
     bottom: -1px;
 }
-
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active{
     color: var(--ocean-color);
 }
-
+/* contact details */
 .contacts{
     font-style: normal;
     line-height: 1.5em;
 }
 .contacts-item{
-        font-weight: 400;
-}
-.contacts .link:hover,
-.contacts .link:active,
-.contacts .link:focus {
-    color:var(--ocean-color);
 }
 .contacts-link{
     transition: color var(--animation);
 }
+.contacts-link .link:hover,
+.contacts-link .link:active,
+.contacts-link .link:focus {
+    color:var(--ocean-color);
+}
+
 
                     /* HERO */
 
@@ -171,9 +174,7 @@ button {
     margin:auto auto 48px auto;
     max-width: 496px; 
 }
-.hero-container {
-
-}
+            /* blue button general */
 .blue-button {
     font-family: "Roboto", sans-serif; 
     color: #FFF;
@@ -196,16 +197,19 @@ button {
 .blue-button:focus {
     background-color: var(--ocean-color);
 }
+                        /*  */
 
                 /* benefits section */
 
 .benefits-section{
     padding: 120px 0;
 }
-
 .benefits-list{
     display: flex;
     gap: 24px;
+}
+.text-section {
+    width: calc((100% - 72px) / 4);
 }
 .benefits-icon-box{
     background-color: var(--cloud-color);
@@ -217,8 +221,8 @@ button {
     align-items: center;
     justify-content: center;
 }
-.text-section {
-    width: calc((100% - 72px) / 4);
+.benefits-icon{
+
 }
 .title {
     font-weight: 500;
@@ -227,7 +231,6 @@ button {
     text-transform: capitalize;
     margin-bottom: 8px;
 }
-
 .benefits-text{
     letter-spacing: 0.02em;
     color:var(--body-text-color);
@@ -235,12 +238,12 @@ button {
 
 
                 /* What are we doing */
+
 .wawd-section {
     padding-bottom: 120px;
-
 }
 .wawd-title {
-    color: var(--title-color);
+    color: var(--main-grey-color);
     text-align: center;
     font-weight: 700;
     font-size: 36px;
@@ -253,8 +256,8 @@ button {
     gap: 24px;
 }
 
-
                     /* Team */
+
 
 .team-section {
     background-color: var(--cloud-color);
@@ -280,7 +283,7 @@ button {
     background-color: #FFF;
 }
 .team-title {
-    color:var(--title-color);
+    color:var(--main-grey-color);
     text-align: center;
     font-weight: 700;
     font-size: 36px;
@@ -319,6 +322,7 @@ button {
 }
 
                     /* Customers */
+
 .customers{
     padding: 120px 0;
 }
@@ -344,11 +348,9 @@ button {
     transition: color var(--animation), border-color var(--animation);
 
 }
-
 .cust-icon{
     fill: currentColor;
 }
-
 .cust-link:hover,
 .cust-link:focus {
     color: var(--ocean-color);
@@ -464,7 +466,7 @@ button {
 .picture-title{
     font-weight: 500;
     font-size: 20px;
-    color: var(--title-color);
+    color: var(--main-grey-color);
     margin-bottom: 8px;
 }
 .picture-text {
@@ -481,7 +483,7 @@ button {
 
 .footer {
     background-color: var(--main-grey-color);
-    color: var(--main-white-color);
+    color: var(--cloud-color);
     padding: 100px 0px;
 }
 .footer-container {
@@ -496,7 +498,7 @@ button {
     margin-bottom: 16px; 
 }
 .logo-white {
-    color: var(--main-white-color);
+    color: var(--cloud-color);
 }
 .footer-text{
     max-width: 264px;
@@ -602,7 +604,7 @@ button {
     width: 100%;
     height: 100%;
     z-index: 999;
-    transition: visibility var(--animation);
+    transition: opacity var(--animation), visibility var(--animation);
 }
 
 .modal{
@@ -611,17 +613,15 @@ button {
     padding: 72px 24px 24px 24px;
 
     flex-shrink: 0;
-    background-color: #FFF;
     border-radius: 4px;
     background: #FCFCFC;
-    border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 
     position: absolute;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
-    transition: transform var(--animation); 
+    transition: transform var(--animation);
 }
 .close-btn {
     width:24px;
