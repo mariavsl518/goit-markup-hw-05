@@ -114,6 +114,9 @@ button {
     font-style: normal;
     padding: 24px 0;
 }
+.nav-link.active {
+    color: var(--ocean-color);
+}
 .nav-link.active::after{
     content: "";
     width: 100%;
@@ -781,16 +784,15 @@ button {
 }
 
 .policy-link{
-    color: #4d5ae5;
+    color: var(--iris-color);
 }
-.checkbox-input:checked + .policy-label .modal-custom-checkbox{
+.checkbox-input:checked + .policy-label .modal-custom-checkbox,
+.checkbox-input:focus + .policy-label .modal-custom-checkbox{
     background-color: var(--ocean-color);
     border: none;
     fill: var(--cloud-color);
 }
-/* .checkbox-input:active +.policy-label>.modal-custom-checkbox>.check-icon  {
-    opacity: 1;
-} */
+
 .send-btn {
     line-height: 1.5;
     transition: background-color var(--animation);
